@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from cpl import compiler
+import cpl.compiler
 
-import readline
+import readline, traceback
 
 print "Enter a blank line or hit Ctrl+D to leave.\n"
 
@@ -15,4 +15,8 @@ while True:
     if s == "":
         break
     
-    print compiler.parse(s)
+    try:
+        reload(cpl.compiler)
+        print cpl.compiler.parse(s)
+    except:
+        traceback.print_exc()
