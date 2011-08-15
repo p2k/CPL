@@ -234,7 +234,7 @@ simple_atom = (NotAny(reserved).suppress() + Regex(r'[a-z][a-zA-Z0-9_]*'))
 quoted_atom = (Suppress("'") + Regex(r'[a-zA-Z0-9_ ]+') + Suppress("'"))
 
 atom = (quoted_atom | simple_atom).setParseAction(Atom.fromParser).setName("atom")
-var = Regex(r'[A-Z][a-zA-Z0-9_]*').setParseAction(Variable.fromParser).setName("variable")
+var = Regex(r'[A-Z_][a-zA-Z0-9_]*').setParseAction(Variable.fromParser).setName("variable")
 number = (Regex(r'-?([1-9][0-9]*|0)') + Optional(Regex(r'\.[0-9]+'))).setParseAction(numberFromParser).setName("number")
 
 fun_name = (Optional((quoted_atom | simple_atom) + Suppress(":"), default="") + (quoted_atom | simple_atom)).setParseAction(FunName.fromParser).setName("fun_name")

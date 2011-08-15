@@ -1,0 +1,20 @@
+
+-module(demo).
+
+test([H|T]) ->
+  F=fun
+      (true) -> false;
+      (A) -> A+1*2
+  end,
+  [F(H), 4.4, -(3)];
+
+test(B) ->
+  C=B+1,
+  {B, {C}}.
+
+spam(X) ->
+  case X of
+    1 -> test(2);
+    Y -> Y /= 2
+  end.
+

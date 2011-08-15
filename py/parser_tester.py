@@ -2,21 +2,24 @@
 
 import cpl.compiler
 
-import readline, traceback
+import sys, readline, traceback
 
-print "Enter a blank line or hit Ctrl+D to leave.\n"
-
-while True:
-    try:
-        s = raw_input("> ")
-    except EOFError:
-        print ""
-        break
-    if s == "":
-        break
+if len(sys.argv) > 1:
+    print cpl.compiler.parse(open(sys.argv[1], "r").read())
+else:
+    print "Enter a blank line or hit Ctrl+D to leave.\n"
     
-    try:
-        reload(cpl.compiler)
-        print cpl.compiler.parse(s)
-    except:
-        traceback.print_exc()
+    while True:
+        try:
+            s = raw_input("> ")
+        except EOFError:
+            print ""
+            break
+        if s == "":
+            break
+        
+        try:
+            reload(cpl.compiler)
+            print cpl.compiler.parse(s)
+        except:
+            traceback.print_exc()
