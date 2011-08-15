@@ -33,8 +33,8 @@ approach; we will see how far it can get.
 :cpl stands for :construct programming language. It is normally written using
 a triangular colon and small caps. In its ASCII representation, a regular colon
 and lower case letters are used instead, to maintain the type face. Whenever a
-colon cannot be used (folder names, in URLs, IRC channels, ...) the name is
-spelled in uppercase, as an exception.
+colon cannot be used (folder names, URLs, etc.) the name is spelled in
+uppercase, as an exception.
 
 :construct, on the other hand, is the brand of a (planned) Demotool which
 incorporates :cpl in a visual programming environment. All elements and building
@@ -69,9 +69,9 @@ For the reference, I also have created a group entry on
 ## Contact ##
 
 * My homepage: http://p2k-network.org
-* Follow me on [Twitter](twitter.com/mega_p2k).
+* Follow me on [Twitter](http://twitter.com/mega_p2k).
 * Jabber/XMPP: p2k@jabber.p2k-network.org
-* IRC (**moved**): #CPL on IRCNet - open discussion 24/7
+* IRC (**moved**): #construct on IRCNet - open discussion 24/7
 * [Message via GitHub](https://github.com/inbox/new/p2k)
 * I was at the [Evoke 2011](http://www.evoke.eu/2011/) in person. Remember that
   humble guy with the large 27" iMac wearing a T-shirt with Mega Man on it.
